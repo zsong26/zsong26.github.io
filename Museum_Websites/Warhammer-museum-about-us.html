@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Warhammer Museum</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: #0a0b0b;
+      color: #eadfca;
+      line-height: 1.75;
+      background-image: radial-gradient(circle at top, rgba(120, 130, 125, 0.08), transparent 45%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background-color: #060707;
+      border-bottom: 1px solid #3c352a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: #f2e8d6;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
+
+    nav a {
+      color: #a7ccb7;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #43fd4c;
+    }
+
+    .codex-banner {
+      padding: 72px 0 32px;
+    }
+
+    .codex-banner-inner {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .codex-label {
+      font-family: Georgia, "Times New Roman", serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.78rem;
+      color: #c29b57;
+      margin-bottom: 10px;
+    }
+
+    .codex-banner h1 {
+      font-size: 3rem;
+      color: #f2e8d6;
+      margin-bottom: 12px;
+    }
+
+    .codex-banner p {
+      max-width: 760px;
+      color: #d8ccb7;
+      font-size: 1.04rem;
+    }
+
+    .codex-page {
+      position: relative;
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto 70px;
+      background: linear-gradient(180deg, #181510 0%, #13100c 100%);
+      border: 1px solid #4b4232;
+      border-radius: 10px;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
+
+    .codex-topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 28px;
+      border-bottom: 1px solid #393225;
+      background: linear-gradient(90deg, #0f0d0a 0%, #1a1610 50%, #0f0d0a 100%);
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 0.76rem;
+      color: #bfa98a;
+    }
+
+    .codex-spread {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+
+    .codex-main,
+    .codex-side {
+      padding: 34px 30px 40px;
+      min-height: 760px;
+    }
+
+    .codex-main {
+      border-right: 1px solid #342d22;
+      background-image: linear-gradient(rgba(255,255,255,0.015), rgba(255,255,255,0.015)), linear-gradient(transparent 97%, rgba(242,232,214,0.05) 97%);
+      background-size: 100% 100%, 100% 34px;
+    }
+
+    
+
+    
+
+    .codex-side {
+      background: linear-gradient(180deg, #12100c 0%, #16120d 100%);
+    }
+
+    
+
+    
+
+    .chapter {
+      margin-bottom: 34px;
+    }
+
+    .chapter:last-child {
+      margin-bottom: 0;
+    }
+
+    .chapter-mark {
+      font-family: Georgia, "Times New Roman", serif;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-size: 0.74rem;
+      color: #c29b57;
+      margin-bottom: 8px;
+    }
+
+    .chapter h2 {
+      font-size: 1.8rem;
+      color: #f2e8d6;
+      margin-bottom: 12px;
+    }
+
+    .chapter p {
+      color: #ddd1bc;
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+
+    .chapter p:last-child {
+      margin-bottom: 0;
+    }
+
+    .mission-panel {
+      border: 1px solid #554731;
+      background: linear-gradient(180deg, #1f1911 0%, #18130d 100%);
+      padding: 22px 22px 24px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .mission-panel::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(194, 155, 87, 0.22);
+      pointer-events: none;
+    }
+
+    .mission-panel h2 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .value-list,
+    .community-list {
+      padding-left: 20px;
+    }
+
+    .value-list li,
+    .community-list li {
+      color: #ddd1bc;
+      margin-bottom: 12px;
+    }
+
+    .value-list strong,
+    .community-list strong {
+      color: #f2e8d6;
+    }
+
+    .side-panel {
+      border: 1px solid #4a4030;
+      padding: 18px 18px 20px;
+      margin-bottom: 22px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .side-panel:last-child {
+      margin-bottom: 0;
+    }
+
+    .side-mark {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.72rem;
+      color: #c29b57;
+      margin-bottom: 8px;
+    }
+
+    .side-panel h3 {
+      font-size: 1.2rem;
+      color: #f2e8d6;
+      margin-bottom: 10px;
+    }
+
+    .side-panel p {
+      color: #d7cab4;
+      font-size: 0.96rem;
+      margin-bottom: 10px;
+    }
+
+    .side-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      border-top: 1px solid #3c352a;
+      background-color: #060707;
+      color: #bdae95;
+    }
+
+    .footer-content {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Warhammer Museum</div>
+      <nav>
+        <ul>
+          <li><a href="Warhammer-museum-homepage.html">Home</a></li>
+          <li><a href="Warhammer-museum-about-us.html">About</a></li>
+          <li><a href="Warhammer-museum-collection.html">Collection</a></li>
+          <li><a href="exhibitions.html">Exhibitions</a></li>
+          <li><a href="Warhammer_museum_visit.html">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="codex-banner">
+      <div class="codex-banner-inner">
+<h1>About Us</h1>
+        <p>
+          Warhammer Museum is dedicated to the Warhammer franchise and its world-wide community, where Warhammer miniatures are presented as curated objects of craft, design, and interpretation.
+        </p>
+      </div>
+    </section>
+
+    <section class="codex-page">
+      <div class="codex-topbar">
+        <span>Warhammer Museum</span>
+</div>
+
+      <div class="codex-spread">
+        <div class="codex-main">
+          <section class="chapter">
+            <div class="chapter-mark">I. Overview</div>
+            <h2>Who We Are</h2>
+            <p>
+              With passion, care, and determination, The Warhammer Museum is dedicated to the collection, preservation, and interpretation of Warhammer miniatures and their associated visual culture. Through exhibition and display, the museum presents figures, vehicles, and constructed scenes as objects of craftsmanship, design, and material practice.
+            </p>
+            <p>
+              Miniature making is at the heart of this museum. Every figure is built, painted, and shaped through time, patience, and personal choice. These works are more than representations of a fictional world. They carry the mark of the people who made them, in every brushstroke, every detail, and every decision along the way.
+            </p>
+            <p>By bringing Warhammer into a museum setting, we create a space where these miniatures can be seen differently. Visitors are invited to slow down, look closely, and appreciate the care behind each piece. Whether you are a long-time hobbyist or encountering Warhammer for the first time, the museum offers a place to explore, learn, and enjoy these works as part of a shared creative culture.
+            </p>
+            <p>We invite you to take your time here. Look closely, notice the details, and enjoy each piece for what it is. These miniatures are not just part of a story. They are built, painted, and brought to life by hand, shaped by the people who care about them. Whether you are here out of curiosity or deep passion, this is a place to explore, appreciate, and share in that experience.
+
+            </p>
+          </section>
+
+          <section class="mission-panel chapter">
+            <div class="chapter-mark">II. Mission Statement</div>
+            <h2>To present, care, and share Warhammer miniatures as objects of visual culture, craftsmanship, and curated interpretation.</h2>
+
+          </section>
+
+          <section class="chapter">
+            <div class="chapter-mark">III. Values</div>
+            <h2>Principles That Guide the Museum</h2>
+            <p>At the heart of this museum is the community that makes it possible.
+            </p>
+            <ul class="value-list">
+              <li><strong>Community and Craft:</strong> Every miniature begins in someone’s hands. Built and painted by hobbyists around the world, each piece reflects time, care, and creativity. Without this community, there would be no collection.</li>
+              <li><strong>Care and Respect:</strong> Each object is treated as a work shaped by its maker. It is presented with attention and respect.</li>
+              <li><strong>Clarity and Access:</strong> The museum is easy to explore. Information is kept clear so all visitors can navigate it comfortably.</li>
+              <li><strong>Shared Experience:</strong> This is a space shaped by a shared passion. Whether you are new or experienced to Warhammer, you are welcome here.</li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="codex-side">
+          <section class="side-panel">
+            <div class="side-mark">IV. Community</div>
+            <h3>Our Ties to the Community</h3>
+            <p>
+              The museum connects Warhammer enthusiasts with a wider audience. It offers a space where familiar objects can be seen in a new way, while remaining approachable to those encountering the hobby for the first time.
+            </p>
+            <p>
+              It serves a community built on making, painting, collecting, and sharing. These practices are recognized not as background hobby work, but as meaningful and creative cultural activity.
+            </p>
+          </section>
+
+          <section class="side-panel">
+            <div class="side-mark">V. Contribution</div>
+            <h3>What We Hope to Contribute</h3>
+            <p>
+              The museum presents miniature culture within a museum setting. It shows that objects often seen as part of gaming can also be understood as material culture, visual work, and exhibition pieces.
+            </p>
+            <p>In doing so, it offers a different way to see and think about these objects.
+            </p>
+          </section>
+
+          <section class="side-panel">
+            <div class="side-mark">VI. Service</div>
+            <h3>Who the Museum Serves</h3>
+            <p>Everybody!
+            </p>
+            <p>
+                The museum welcomes both long-time hobbyists and first-time visitors. It is designed to be easy to explore, no matter your level of familiarity.
+            </p>
+            <p>Whether you come with experience or curiosity, we'd like to say there is something here for you.
+
+            </p>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Warhammer Museum</p>
+      <p>San Francisco, California</p>
+    </div>
+  </footer>
+</body>
+</html>

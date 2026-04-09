@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visit | Warhammer Museum</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: #0c1110;
+      color: #e8edea;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background-color: #070b0a;
+      border-bottom: 1px solid #2a3833;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+.nav-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: #f2e8d6;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
+
+    nav a {
+      color: #a7ccb7;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #43fd4c;
+    }
+
+    .page-shell {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .page-header {
+      padding: 56px 0 28px;
+      border-bottom: 1px solid #24302c;
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: #8fbfa5;
+      margin-bottom: 10px;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      margin-bottom: 14px;
+      color: #eef2ef;
+    }
+
+    .page-header p {
+      max-width: 760px;
+      color: #c3cbc6;
+      font-size: 1.05rem;
+    }
+
+    .hero-panel {
+      margin: 30px 0 36px;
+      background: linear-gradient(135deg, #151e1b 0%, #101715 100%);
+      border: 1px solid #293631;
+      border-radius: 12px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero-panel h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #eef2ef;
+    }
+
+    .hero-panel p {
+      color: #c3cbc6;
+      margin-bottom: 16px;
+    }
+
+    .quick-info {
+      background-color: #0f1513;
+      border: 1px solid #293631;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .quick-info h3 {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+      color: #eef2ef;
+    }
+
+    .quick-info p {
+      color: #c1c8c4;
+      margin-bottom: 10px;
+    }
+
+    .quick-info p:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      padding-bottom: 70px;
+    }
+
+    .info-card {
+      background-color: #151e1b;
+      border: 1px solid #293631;
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .info-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #eef2ef;
+    }
+
+    .info-card p,
+    .info-card li {
+      color: #c1c8c4;
+      font-size: 0.98rem;
+    }
+
+    .hours-list,
+    .ticket-list,
+    .visit-list {
+      list-style: none;
+    }
+
+    .hours-list li,
+    .ticket-list li,
+    .visit-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid #24302c;
+    }
+
+    .hours-list li:last-child,
+    .ticket-list li:last-child,
+    .visit-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .hours-list strong,
+    .ticket-list strong,
+    .visit-list strong {
+      color: #eef2ef;
+    }
+
+    .note {
+      margin-top: 16px;
+      color: #aeb7b2;
+      font-size: 0.92rem;
+    }
+
+    footer {
+      border-top: 1px solid #2a3833;
+      background-color: #070b0a;
+      color: #aeb7b2;
+    }
+
+    .footer-content {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Warhammer Museum</div>
+      <nav>
+        <ul>
+          <li><a href="Warhammer-museum-homepage.html">Home</a></li>
+          <li><a href="Warhammer-museum-about-us.html">About</a></li>
+          <li><a href="Warhammer-museum-collection.html">Collection</a></li>
+          <li><a href="exhibitions.html">Exhibitions</a></li>
+          <li><a href="Warhammer_museum_visit.html">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-header">
+      <div class="eyebrow">Plan Your Visit</div>
+      <h1>Visit the Museum</h1>
+      <p>
+        Find hours, admission, and visitor information before stepping into the collection.
+      </p>
+    </section>
+
+    <section class="hero-panel">
+      <div>
+        <h2>Welcome to the Warhammer Museum</h2>
+        <p>
+          Explore galleries of painted miniatures and curated displays from across the Warhammer universe. 
+        </p>
+      </div>
+      <div class="quick-info">
+        <h3>At a Glance</h3>
+        <p><strong>Location:</strong> 40000 Holy Terra Street, San Francisco, CA</p>
+        <p><strong>Nearest Transit:</strong> BART and Muni lines</p>
+        <p><strong>Open Time:</strong> All but Monday</p>
+        <p><strong>Contact:</strong> info@warhammermuseum.org</p>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card">
+        <h2>Hours</h2>
+        <ul class="hours-list">
+          <li><strong>Monday</strong><span>Closed</span></li>
+          <li><strong>Tuesday</strong><span>10:00 AM to 5:00 PM</span></li>
+          <li><strong>Wednesday <em>(Miniature Painting Day)</em></strong><span>10:00 AM to 10:30 PM</span></li>
+          <li><strong>Thursday</strong><span>10:00 AM to 8:00 PM</span></li>
+          <li><strong>Friday</strong><span>10:00 AM to 5:00 PM</span></li>
+          <li><strong>Saturday</strong><span>10:00 AM to 8:00 PM</span></li>
+          <li><strong>Sunday</strong><span>10:00 AM to 8:00 PM</span></li>
+        </ul>
+        <p class="note">Last entry is 45 minutes before closing.</p>
+                <p class="note">You are welcomed to bring your own miniatures.</p>
+      </article>
+
+      <article class="info-card">
+        <h2>Tickets</h2>
+        <ul class="ticket-list">
+          <li><strong>Adults</strong><span>$15</span></li>
+          <li><strong>Students</strong><span>$10</span></li>
+          <li><strong>Seniors</strong><span>$12</span></li>
+          <li><strong>Youth 12 and Under</strong><span>Free</span></li>
+          <li><strong>On Wednesday after 6:00 PM</strong><span>Free</span></li>
+        </ul>
+        <p class="note">Advance online reservations are recommended for Wednesdays and weekends.</p>
+      </article>
+
+      <article class="info-card">
+        <h2>Visitor Information</h2>
+        <ul class="visit-list">
+          <li><strong>Photography</strong><span>Personal photography is welcome.</span></li>
+          <li><strong>Accessibility</strong><span>All public galleries are wheelchair accessible.</span></li>
+          <li><strong>Coat Check</strong><span>Available during standard museum hours.</span></li>
+          <li><strong>Museum Shop</strong><span>Open during all public hours.</span></li>
+          <li><strong>Miniatures and Hobby Tools</strong><span>Only permited on Wednesday.</span></li>
+        </ul>
+      </article>
+
+      <article class="info-card">
+        <h2>Before You Arrive</h2>
+        <ul class="visit-list">
+          <li><strong>Group Visits</strong><span>Groups of 8 or more should book in advance.</span></li>
+          <li><strong>School Visits</strong><span>Weekday morning tours are available by request.</span></li>
+          <li><strong>Parking</strong><span>Nearby public parking garages are available.</span></li>
+          <li><strong>Food and Drink</strong><span>Not permitted inside the galleries.</span></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Warhammer Museum</p>
+      <p>San Francisco, California</p>
+    </div>
+  </footer>
+</body>
+</html>
