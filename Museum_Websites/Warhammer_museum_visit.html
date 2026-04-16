@@ -15,7 +15,13 @@
       font-family: Georgia, "Times New Roman", serif;
       background-color: #0c1110;
       color: #e8edea;
-      line-height: 1.6;
+      line-height: 1.6;     
+      background-image:
+      linear-gradient(rgba(8, 10, 10, 0.82), rgba(8, 10, 10, 0.9)),
+      url('https://www.artwstudio.com/wp-content/uploads/2023/03/Art-W_Studio_An_illustration_of_a_Warhammer_army_in_the_grimdar_5c6e8a50-c539-47da-bf74-e709726a4b27-1.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
 
     a {
@@ -233,6 +239,24 @@
       gap: 20px;
       flex-wrap: wrap;
     }
+
+    .special-event-banner {
+     margin: 0 0 28px;
+     display: flex;
+     align-items: center;
+     gap: 16px;
+     background: linear-gradient(90deg, rgba(52, 35, 12, 0.95), rgba(78, 50, 16, 0.92));
+     border: 1px solid #7a5c21;
+     border-radius: 12px;
+     padding: 18px 22px;
+     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+     }
+
+     .event-icon img {
+  width: 200px;
+  height: auto;
+  filter: brightness(3.8);
+     }
   </style>
 </head>
 <body>
@@ -276,13 +300,26 @@
       </div>
     </section>
 
+    <section class="special-event-banner">
+      <div class="event-icon">
+        <img src="brush_icon.png" alt="Brush Icon">
+      </div>
+      <div>
+      <h2>Wednesday Warhammer Day</h2>
+      <p>
+      Bring your own miniatures and join an evening dedicated to painting,
+      gaming, and other community activities!
+      </p>
+      </div>
+    </section>
+
     <section class="info-grid">
       <article class="info-card">
         <h2>Hours</h2>
         <ul class="hours-list">
           <li><strong>Monday</strong><span>Closed</span></li>
           <li><strong>Tuesday</strong><span>10:00 AM to 5:00 PM</span></li>
-          <li><strong>Wednesday <em>(Miniature Painting Day)</em></strong><span>10:00 AM to 10:30 PM</span></li>
+          <li><strong>Wednesday <em>(Warhammer Day)</em></strong><span>10:00 AM to 10:30 PM</span></li>
           <li><strong>Thursday</strong><span>10:00 AM to 8:00 PM</span></li>
           <li><strong>Friday</strong><span>10:00 AM to 5:00 PM</span></li>
           <li><strong>Saturday</strong><span>10:00 AM to 8:00 PM</span></li>
